@@ -2,6 +2,9 @@
 # and its dependencies with the aid of the Mix.Config module.
 use Mix.Config
 
+config :crawl_estat, stats_list_url: "http://api.e-stat.go.jp/rest/2.0/app/getStatsList"
+config :crawl_estat, stats_data_url: "http://api.e-stat.go.jp/rest/2.0/app/getStatsData"
+
 # This configuration is loaded before any dependency and is restricted
 # to this project. If another project depends on this project, this
 # file won't be loaded nor affect the parent project. For this reason,
