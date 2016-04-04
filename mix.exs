@@ -27,6 +27,12 @@ defmodule CrawlEstat.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:mix_test_watch, "~> 0.2", only: [:dev, :test]},
+      {:poison,    "~> 1.2"},
+      {:httpoison, "~> 0.7"},
+      {:floki, "~> 0.8"},
+      {:credo, "~> 0.3", only: [:dev, :test]}
+    ]
   end
 end
