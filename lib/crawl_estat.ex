@@ -14,14 +14,7 @@ defmodule CrawlEstat do
       {:ok, response} ->
         Logger.info(inspect Floki.find(response.body, "table_inf"))
 
-        prob_ids = Floki.find(response.body, "table_inf")
-        Enum.reduce(prob_ids, [], fn(prob_id, acc) ->
-          case prob_id do
-            {_, [{"id", id}], _} ->
-              IO.inspect(id)
-              [id|acc]
-          end
-        end)
+        Floki.find(response.body, "table_inf") |> Floki.attribute("id")
     end
   end
 
