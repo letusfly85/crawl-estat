@@ -3,7 +3,6 @@ defmodule CrawlEstatTest do
   doctest CrawlEstat
 
   test "the truth" do
-    #CrawlEstat.find_life_table
     ids = CrawlEstat.find_stats_list("00450012", "2016")
 
     IO.inspect(ids)
